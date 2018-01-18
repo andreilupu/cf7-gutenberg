@@ -3,10 +3,10 @@
  * editor-specific styles using the same selectors will take precedence.
  */
 .wp-block-gutenberg-examples-example-05-recipe-card-esnext .recipe-image {
-	background: #f1f1f1;
 	float: right;
 	width: 50%;
 	min-height: 100px;
+	background: #f1f1f1;
 	text-align: center;
 }
 
@@ -15,15 +15,15 @@
 }
 
 .wp-block-gutenberg-examples-example-05-recipe-card-esnext .recipe-image button.image-button {
+	display: block;
 	margin: 0;
 	padding: 0;
-	display: block;
 }
 
 .wp-block-gutenberg-examples-example-05-recipe-card-esnext .recipe-image img {
 	display: block;
-	z-index: 1;
 	position: relative;
+	z-index: 1;
 }
 
 .wp-block-gutenberg-examples-example-05-recipe-card-esnext h2 {
@@ -31,5 +31,6 @@
 }
 
 .wp-block-gutenberg-examples-example-05-recipe-card-esnext ul {
-	padding-left: 2.5em !important; /* Needs fix in Gutenberg. */
+	padding-left: 2.5em !important;
+	/* Needs fix in Gutenberg. */
 }

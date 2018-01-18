@@ -38,17 +38,19 @@ class CF7_GutenbergBlockPlugin {
 	}
 
 	function register_block() {
-		register_block_type( 'orbitfox/contact-form-7', array(
-			'render_callback' => array( $this, 'render_block' ),
-			'attributes' => array(
-				'formID' => array(
-					'type' => 'number',
+		register_block_type(
+			'orbitfox/contact-form-7', array(
+				'render_callback' => array( $this, 'render_block' ),
+				'attributes' => array(
+					'formID' => array(
+						'type' => 'number',
+					),
+					'title' => array(
+						'type' => 'string',
+					),
 				),
-				'title' => array(
-					'type' => 'string',
-				)
 			)
-		) );
+		);
 	}
 
 	/**
@@ -69,7 +71,7 @@ class CF7_GutenbergBlockPlugin {
 
 		$title = isset( $attributes['title'] ) ? 'title="' . $attributes['title'] . '"' : '';
 
-		return '[contact-form-7 id="' .$id . '" ' . $title . ']';
+		return '[contact-form-7 id="' . $id . '" ' . $title . ']';
 	}
 
 	/**
@@ -99,7 +101,7 @@ class CF7_GutenbergBlockPlugin {
 	 */
 	public function __clone() {
 		// Cloning instances of the class is forbidden.
-		_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheatin&#8217; huh?', 'textdomain' ), '1.0.0' );
+		_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheatin&#8217; huh?', 'cf-7-gutenberg' ), '1.0.0' );
 	}
 
 	/**
@@ -111,6 +113,6 @@ class CF7_GutenbergBlockPlugin {
 	 */
 	public function __wakeup() {
 		// Unserializing instances of the class is forbidden.
-		_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheatin&#8217; huh?', 'textdomain' ), '1.0.0' );
+		_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheatin&#8217; huh?', 'cf-7-gutenberg' ), '1.0.0' );
 	}
 }

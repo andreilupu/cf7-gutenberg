@@ -1,0 +1,28 @@
+{
+  "name": "cf-7-gutenberg",
+  "version": "1.0.0",
+  "description": "Contact Form 7 block for gutenberg  ",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Codeinwp/cf-gutenberg.git"
+  },
+  "keywords": [
+    "wordpress-plugin"
+  ],
+  "textdomain": "cf-7-gutenberg",
+  "category": "plugins",
+  "author": "ThemeIsle <friends@themeisle.com>",
+  "license": "GPL-2.0+",
+  "bugs": {
+    "url": "https://github.com/Codeinwp/cf-gutenberg/issues"
+  },
+  "pot": {
+    "reportmsgidbugsto": "https://github.com/Codeinwp/cf-gutenberg/issues",
+    "languageteam": "Themeisle Translate <friends@themeisle.com>",
+    "lasttranslator": "Themeisle Translate Team <friends@themeisle.com>"
+  },
+  "devDependencies": {
+    "grunt-plugin-fleet": "github:codeinwp/grunt-plugin-fleet",
+    "load-project-config": "~0.2.0"
+  }
+}
