@@ -1,4 +1,5 @@
 
  ### v1.0.0 - 2018-01-18 
- **Changes:** 
+ **Changes:**
+  * First release.
   
