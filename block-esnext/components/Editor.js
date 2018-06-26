@@ -1,12 +1,17 @@
 /**
  * WordPress dependencies
  */
-const {Component} = wp.element;
-const {Placeholder, withAPIData} = wp.components;
-const {__} = wp.i18n;
+const { Component } = wp.element;
+const {
+	TextControl,
+	SelectControl,
+	Placeholder,
+	withAPIData,
+} = wp.components;
 
-const {InspectorControls} = wp.blocks;
-const {TextControl, SelectControl} = InspectorControls;
+const { __ } = wp.i18n;
+
+const { InspectorControls } = wp.editor;
 
 class Editor extends Component {
 	constructor() {

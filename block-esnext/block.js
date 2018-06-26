@@ -1,12 +1,6 @@
 const { __ } = wp.i18n;
 const {
 	registerBlockType,
-	Editable,
-	MediaUploadButton,
-	source: {
-		attr,
-		children
-	}
 } = wp.blocks;
 
 import Editor from './components/Editor'
