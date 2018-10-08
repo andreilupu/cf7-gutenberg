@@ -1,15 +1,17 @@
 /**
  * WordPress dependencies
  */
+const { __ } = wp.i18n;
+
 const { Component } = wp.element;
+
 const {
 	TextControl,
 	SelectControl,
 	Placeholder,
-	withAPIData,
 } = wp.components;
 
-const { __ } = wp.i18n;
+const { withSelect } = wp.data;
 
 const { InspectorControls } = wp.editor;
 
@@ -26,8 +28,8 @@ class Editor extends Component {
 
 		const {formID, title, className} = attributes
 
-		if (typeof forms.data !== "undefined" && forms.data !== []) {
-			forms.data.forEach(function (e, i) {
+		if (typeof forms !== "undefined" && forms !== []) {
+			forms.forEach(function (e, i) {
 				options.push({
 					value: e.id,
 					label: e.title
@@ -68,8 +70,9 @@ class Editor extends Component {
 	}
 }
 
-export default withAPIData(() => {
+export default withSelect( ( select ) => {
+	const forms = select( 'orbitfox/contact-form-7' ).getCFList();
 	return {
-		forms: '/contact-form-7/v1/contact-forms/',
+		forms
 	};
-})(Editor);
+} )( Editor );
