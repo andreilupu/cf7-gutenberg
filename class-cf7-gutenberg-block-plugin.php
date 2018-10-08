@@ -23,7 +23,7 @@ class CF7_GutenbergBlockPlugin {
 		wp_enqueue_script(
 			'gutenberg-cf7',
 			plugins_url( '/block-esnext/block.build.js', __FILE__ ),
-			array( 'wp-blocks', 'wp-i18n', 'wp-element', 'underscore' ),
+			array( 'wp-api' ),
 			filemtime( plugin_dir_path( __FILE__ ) . '/block-esnext/block.build.js' )
 		);
 	}
@@ -39,7 +39,8 @@ class CF7_GutenbergBlockPlugin {
 
 	function register_block() {
 		register_block_type(
-			'orbitfox/contact-form-7', array(
+			'orbitfox/contact-form-7',
+			array(
 				'render_callback' => array( $this, 'render_block' ),
 				'attributes' => array(
 					'formID' => array(
@@ -62,7 +63,7 @@ class CF7_GutenbergBlockPlugin {
 	 *
 	 * @return string
 	 */
-	function render_block( $attributes, $content ) {
+	function render_block( $attributes ) {
 		$id = $attributes['formID'];
 
 		if ( empty( $id ) || $id === 'none' ) {

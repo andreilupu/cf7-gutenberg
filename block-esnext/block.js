@@ -1,15 +1,11 @@
 const { __ } = wp.i18n;
 const {
 	registerBlockType,
-	Editable,
-	MediaUploadButton,
-	source: {
-		attr,
-		children
-	}
 } = wp.blocks;
 
-import Editor from './components/Editor'
+import Editor from './components/Editor';
+
+import './store.js';
 
 registerBlockType( 'orbitfox/contact-form-7', {
 	title: __( 'Contact Form 7' ),

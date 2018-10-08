@@ -20,13 +20,13 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 add_action(
-	'plugins_loaded', function () {
-	// call this only if Gutenberg is active
-	if ( function_exists( 'register_block_type' ) ) {
-		// @TODO maybe wrap this into a function
-		require_once dirname( __FILE__ ) . '/class-cf7-gutenberg-block-plugin.php';
-		CF7_GutenbergBlockPlugin::instance();
+	'plugins_loaded',
+	function () {
+		// call this only if Gutenberg is active
+		if ( function_exists( 'register_block_type' ) ) {
+			require_once dirname( __FILE__ ) . '/class-cf7-gutenberg-block-plugin.php';
+			CF7_GutenbergBlockPlugin::instance();
+		}
 	}
-}
 );
 
